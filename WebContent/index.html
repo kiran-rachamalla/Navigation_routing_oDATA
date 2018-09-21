@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+		<title>Walk Through</title>
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m"
+				data-sap-ui-theme="sap_bluecrystal"
+				data-sap-ui-bindingSyntax="complex"
+				data-sap-ui-compatVersion="edge"
+				data-sap-ui-preload="async"				
+		        data-sap-ui-resourceroots='{
+				  "kiran.Myapp": "./"
+						}'>
+						/* not placed this data-sap-ui-compatVersion="edge" becuase data-sap-ui-bindingSyntax="complex" this will do
+							 and data-sap-ui-bindingSyntax="complex" is required to make the path run like to make this work    
+							 description=" Input Value: {/recipient/name}" in file app.view.xml */
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+
+		<script>
+				/*sap.ui.localResources("walkthrough");
+				var app = new sap.m.App({initialPage:"idWalkThrough1"});s
+				var page = sap.ui.view({id:"idWalkThrough1", viewName:"walkthrough.WalkThrough", type:sap.ui.core.mvc.ViewType.JS});
+				app.addPage(page);
+				app.placeAt("content");*/
+				 sap.ui.getCore().attachInit(function () {
+					 debugger;
+					 new sap.ui.core.ComponentContainer({
+						 name : "kiran.Myapp"
+					 }).placeAt("content");
+					});
+		</script>
+
+	</head>
+	<body class="sapUiBody" role="application">
+	<P> Walk Through</P>
+		<div id="content"></div>
+	</body>
+</html>
