@@ -4,6 +4,7 @@
 		class="sapUiResponsiveMargin" width="auto">
 		<content>
 			<Text text="Click Button" class="sapUiTinyMargin" />
+			<Button id="helloDialogButton" text="{i18n>openDialogButtonText}" press="onOpenDialog" class="sapUiSmallMarginEnd"/>
 			<Button text="{i18n>showHelloButtonText}" press="onShowHello"
 				class="myCustomButton" />
 			<Input value="{/recipient/name}" valueLiveUpdate="true"

@@ -1,7 +1,7 @@
   sap.ui.define([
    "sap/ui/core/mvc/Controller",
-   "sap/m/MessageToast"
-], function (Controller , MessageToast ) {
+   "sap/m/MessageToast",
+], function (Controller , MessageToast  ) {
    "use strict";
    return Controller.extend("kiran.Myapp.controller.HelloPanel", {
       onShowHello : function () {
@@ -16,6 +16,16 @@
           // show message
           MessageToast.show(sMsg);
 //    	  MessageToast.show("Hello World");
+      },
+      onOpenDialog : function() {
+    	  let oView = this.getView();
+    	  let oDialog = oView.byId("helloDialog");
+    	  if (!oDialog) {
+			oDialog = sap.ui.xmlfragment(oView.getId(), "kiran.Myapp.view.HelloDialog");
+			oView.addDependent(oDialog);
+		}
+    	  oDialog.open();
       }
+     
    });
 });
