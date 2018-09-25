@@ -1,21 +1,14 @@
 <mvc:View controllerName="kiran.Myapp.controller.App"
 	xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
-	<App>
+	<App class="myAppDemoWT">
 		<pages>
 			<Page title="{i18n>homepageTitle}">
 				<content>
-					<Panel headerText="{i18n>helloPanelTitle}">
-						<content>
-							<Text text="Hello World" />
-							<Button text="{i18n>showHelloButtonText}"
-								press="onShowHello" />
-							<Input value="{/recipient/name}"
-								description=" Input Value: {/recipient/name}"
-								valueLiveUpdate="true" width="60%" />
-						</content>
-					</Panel>
+					<mvc:XMLView viewName="kiran.Myapp.view.HelloPanel"/>
 				</content>
 			</Page>
 		</pages>
 	</App>
 </mvc:View>
+
+<!-- margin class - https://help.sap.com/saphelp_uiaddon10/helpdata/en/77/7168ffe8324873973151dae2356d1c/frameset.htm -->
