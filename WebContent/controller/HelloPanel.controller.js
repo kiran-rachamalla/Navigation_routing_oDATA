@@ -18,16 +18,7 @@
 //    	  MessageToast.show("Hello World");
       },
       onOpenDialog : function() {
-    	  let oView = this.getView();
-    	  let oDialog = oView.byId("helloDialog");
-    	  if (!oDialog) {
-			oDialog = sap.ui.xmlfragment(oView.getId(), "kiran.Myapp.view.HelloDialog",this);
-			oView.addDependent(oDialog);
-		}
-    	  oDialog.open();
-      },
-      onCloseDialog: function(){
-    	  this.getView().byId("helloDialog").close()
+    	  this.getOwnerComponent().openHelloDialog();
       }
      
    });

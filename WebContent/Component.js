@@ -1,7 +1,8 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
-	"sap/ui/model/json/JSONModel"
-], function(UIComponent , JSONModel ) {
+	"sap/ui/model/json/JSONModel",
+	"kiran/Myapp/controller/HelloDialog"
+], function(UIComponent , JSONModel , HelloDialog ) {	
 	"use strict";
 	return UIComponent.extend("kiran.Myapp.Component", {
 		metadata: {
@@ -24,6 +25,16 @@ sap.ui.define([
 			var oref_model = new JSONModel(oData);
 			this.setModel(oref_model);
 			
+			this._helloDialog = new HelloDialog(this.getRootControl());
+		},
+		
+		exit: function(){
+			this._helloDialog.destroy();
+			delete this._helloDialog;
+		},
+		
+		openHelloDialog: function(){
+			this._helloDialog.open();
 		}
 	});
 });
