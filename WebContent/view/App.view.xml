@@ -2,14 +2,16 @@
 	xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
 	<App class="myAppDemoWT">
 		<pages>
-			<Page title="{i18n>homepageTitle}">
+			<Page title="{i18n&gt;homePageTitle}">
 			<headerContent>
 					<Button
 						icon="sap-icon://hello-world"
 						press="onOpenDialog"/>
 				</headerContent>
 				<content>
-					<mvc:XMLView viewName="kiran.Myapp.view.HelloPanel"/>
+					<mvc:XMLView viewName="kiran.Myapp.view.HelloPanel"/><mvc:XMLView
+						viewName="kiran.Myapp.view.InvoiceList">
+</mvc:XMLView>
 				</content>
 			</Page>
 		</pages>
