@@ -25,7 +25,15 @@
 							
 						</ObjectStatus>
 					</firstStatus>
-					
+					<secondStatus>
+											<ObjectStatus icon="{
+							path:'invoice>Status',
+							formatter: '.ownformatter.My_own_test'
+						
+						}">
+							
+						</ObjectStatus>
+					</secondStatus>
 					</ObjectListItem>
 		</items>
 	</List>
