@@ -15,7 +15,18 @@
 			}
 							}"
 					numberUnit="{view>/currency}"
-					numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : ${invoice>ExtendedPrice} > 9 ?  'Warning' : ${invoice>ExtendedPrice} > 5 ? 'Success' : 'None' }" />
+					numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : ${invoice>ExtendedPrice} > 9 ?  'Warning' : ${invoice>ExtendedPrice} > 5 ? 'Success' : 'None' }" >
+					<firstStatus>
+						<ObjectStatus text="{
+							path:'invoice>Status',
+							formatter: '.formatter.statusText'
+						
+						}">
+							
+						</ObjectStatus>
+					</firstStatus>
+					
+					</ObjectListItem>
 		</items>
 	</List>
 </mvc:View>
