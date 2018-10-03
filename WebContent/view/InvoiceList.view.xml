@@ -1,8 +1,15 @@
 <mvc:View controllerName="kiran.Myapp.controller.InvoiceList" 
          xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
 	>
-	<List headerText="{i18n>invoiceListTitle}"
+	<List id="invoiceList"
 		class="sapUiResponsiveMargin" width="auto" items="{invoice>/Invoices}">
+		<headerToolbar>
+			<Toolbar>
+			<Title text="{i18n>invoiceListTitle}" />
+			<ToolbarSpacer />
+			<SearchField width="50%" search="onFilterInvoices" />
+			</Toolbar>
+		</headerToolbar>
 		<items>
 			<ObjectListItem
 				title="{invoice>Quantity} x {invoice>ProductName}"
@@ -28,7 +35,7 @@
 					<secondStatus>
 											<ObjectStatus icon="{
 							path:'invoice>Status',
-							formatter: '.ownformatter.My_own_test'
+							formatter: '.local_icon_parameter.My_own_test'
 						
 						}">
 							
