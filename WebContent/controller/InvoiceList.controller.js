@@ -31,6 +31,20 @@ sap.ui.define([
 			
 		},
 		
+		onFilterInvoices1: function(oEvent){
+			let aFilter = [];
+			let sQuery = oEvent.getParameter('query');
+			
+			if(sQuery){
+				aFilter.push( new Filter("ProductName",FilterOperator.Contains,sQuery) );
+			}
+			
+			let oList = this.byId("invoiceList1");
+			let oBinding = oList.getBinding("items");
+			oBinding.filter(aFilter);
+			
+		},
+		
 		onPress: function (oEvent) {
 			let oItem = oEvent.getSource();
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
