@@ -27,7 +27,9 @@
 			}
 							}"
 					numberUnit="{view>/currency}"
-					numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : ${invoice>ExtendedPrice} > 9 ?  'Warning' : ${invoice>ExtendedPrice} > 5 ? 'Success' : 'None' }" >
+					numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : ${invoice>ExtendedPrice} > 9 ?  'Warning' : ${invoice>ExtendedPrice} > 5 ? 'Success' : 'None' }" 
+					type="Navigation"
+					press="onPress">
 					<firstStatus>
 						<ObjectStatus text="{
 							path:'invoice>Status',

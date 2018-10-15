@@ -26,6 +26,8 @@ sap.ui.define([
 			this.setModel(oref_model);
 			
 			this._helloDialog = new HelloDialog(this.getRootControl());
+			// create the views based on the url/hash
+			this.getRouter().initialize();
 		},
 		
 		exit: function(){
