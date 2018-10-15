@@ -1,8 +1,9 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/model/json/JSONModel",
-	"kiran/Myapp/controller/HelloDialog"
-], function(UIComponent , JSONModel , HelloDialog ) {	
+	"kiran/Myapp/controller/HelloDialog",
+	"sap/ui/Device"
+], function(UIComponent , JSONModel , HelloDialog, Device ) {	
 	"use strict";
 	return UIComponent.extend("kiran.Myapp.Component", {
 		metadata: {
@@ -24,6 +25,11 @@ sap.ui.define([
 			};
 			var oref_model = new JSONModel(oData);
 			this.setModel(oref_model);
+			
+			// set device model
+			var oDeviceModel = new JSONModel(Device);
+			oDeviceModel.setDefaultBindingMode("OneWay");
+			this.setModel(oDeviceModel, "device");
 			
 			this._helloDialog = new HelloDialog(this.getRootControl());
 			// create the views based on the url/hash
