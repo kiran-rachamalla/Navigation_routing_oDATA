@@ -1,7 +1,9 @@
-<mvc:View controllerName="kiran.Myapp.controller.App"
-	xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
-	<App class="myAppDemoWT" id="app">
+<mvc:View
+	controllerName="kiran.Myapp.controller.App"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true">
+	<App id="app">
+		
 	</App>
 </mvc:View>
-
-<!-- margin class - https://help.sap.com/saphelp_uiaddon10/helpdata/en/77/7168ffe8324873973151dae2356d1c/frameset.htm -->

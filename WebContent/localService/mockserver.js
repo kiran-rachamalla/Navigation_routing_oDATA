@@ -2,23 +2,36 @@ sap.ui.define([
 	"sap/ui/core/util/MockServer"
 ], function (MockServer) {
 	"use strict";
+	
+	var _sAppModulePath = "kiran/Myapp/",
+	_sJsonFilesModulePath = _sAppModulePath + "localService/mockdata";
+	
 	return {
 		init: function () {
-			// create
-			var oMockServer = new MockServer({
-				rootUri: "https://services.odata.org/V2/Northwind/Northwind.svc/"
-			}); 
-			var oUriParameters = jQuery.sap.getUriParameters();
-			// configure
-			MockServer.config({
-				autoRespond: true,
-				autoRespondAfter: oUriParameters.get("serverDelay") || 1000
-			});
-			// simulate
-			var sPath = jQuery.sap.getModulePath("kiran.Myapp.localService");
-			oMockServer.simulate(sPath + "/metadata.xml", sPath + "/mockdata");
-			// start
-			oMockServer.start();
+			var sManifestUrl = jQuery.sap.getModulePath(_sAppModulePath + "manifest", ".json"),
+			sJsonFilesUrl = jQuery.sap.getModulePath(_sJsonFilesModulePath),
+			oManifest = jQuery.sap.syncGetJSON(sManifestUrl).data,
+			oMainDataSource = oManifest["sap.app"].dataSources.employeeRemote,
+			sMetadataUrl = jQuery.sap.getModulePath(_sAppModulePath + oMainDataSource.settings.localUri.replace(".xml", ""), ".xml");
+
+		// create
+		var oMockServer = new MockServer({
+			rootUri: oMainDataSource.uri
+		});
+
+		// configure
+		MockServer.config({
+			autoRespond: true,
+			autoRespondAfter: 1000
+		});
+
+		// simulate
+		oMockServer.simulate(sMetadataUrl, {
+			sMockdataBaseUrl : sJsonFilesUrl
+		});
+
+		// start
+		oMockServer.start();
 		}
 	};
 });

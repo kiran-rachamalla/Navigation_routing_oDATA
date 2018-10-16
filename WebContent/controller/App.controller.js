@@ -1,16 +1,13 @@
   sap.ui.define([
-   "sap/ui/core/mvc/Controller",
-], function (Controller) {
+   "kiran/Myapp/controller/BaseController",
+], function (BaseController) {
    "use strict";
-   return Controller.extend("kiran.Myapp.controller.App",{
+   return BaseController.extend("kiran.Myapp.controller.App",{
 	    
 	   onInit: function () {
-			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
-		},
-	   
-		onOpenDialog : function () {
-			this.getOwnerComponent().openHelloDialog();
+			
 		}
+	   
    
    });
 });
