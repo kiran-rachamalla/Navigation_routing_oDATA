@@ -65,7 +65,11 @@
             "pattern": "",
             "name": "appHome",
             "target": "home"
-         }],
+         }, {
+				"pattern": "employees",
+				"name": "employeeList",
+				"target": "employees"
+			}],
          "targets": {
             "home": {
                "viewId": "home",
@@ -76,7 +80,13 @@
                "viewId": "notFound",
                "viewName": "NotFound",
                "transition": "show"
-            }
+            },
+				"employees": {
+					"viewId": "employeeList",
+					"viewPath": "kiran.Myapp.view.employee",
+					"viewName": "EmployeeList",
+					"viewLevel" : 2
+				}
          }
       },
 		"models": {
