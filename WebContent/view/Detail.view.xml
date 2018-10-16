@@ -18,6 +18,7 @@
 				}
 			}"
 			numberUnit="{view>/currency}"
+			numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : ${invoice>ExtendedPrice} > 9 ?  'Warning' : ${invoice>ExtendedPrice} > 5 ? 'Success' : 'None' }"
 			intro="{invoice>ProductName}"
 			title="{invoice>ShipperName}"/>
 			

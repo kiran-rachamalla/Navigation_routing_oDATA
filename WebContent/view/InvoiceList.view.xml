@@ -67,7 +67,7 @@
 							}
 						}"
 						unit="{view>/currency}"
-						state="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }"/>
+						state="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : ${invoice>ExtendedPrice} > 9 ?  'Warning' : ${invoice>ExtendedPrice} > 5 ? 'Success' : 'None' }"/>
 				</cells>
 			</ColumnListItem>
 		</items>
