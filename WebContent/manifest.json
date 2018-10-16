@@ -1,62 +1,71 @@
 {
-  "_version": "1.8.0",
-  "sap.app": {
-  		"id": "kiran.Myapp",
-  		"type":"application",
-  		"i18n":"i18n/i18n.properties",
-  		"title":"{{appTitle}}",
-  		"description":"{{appDescription}}",
-  		"applicationversion":{
-  			"version": "1.0.0"
-  		  }
-       },
-    "sap.ui":{
-      "technology": "UI5",
-	"deviceTypes": {
-		"desktop": true,
-		"tablet": true,
-		"phone": true		
-	     }
-       },
-     "sap.ui5":{
-       "rootView":{
-       			"viewName":"kiran.Myapp.view.App",
-       			"type": "XML",
-       			"async": true,
-       			"id": "app"
-       },
-       "dependencies": {
-          "minUI5Version": "1.30",
-          "libs":{
-          	"sap.m": {}
-          }
-        },
-        "models":{
-           "i18n":{
-             "type":"sap.ui.model.resource.ResourceModel",
-              "settings":{
-                 "bundleName":"kiran.Myapp.i18n.i18n" 
-              }
-           },
-           "invoice":{
-              "type":"sap.ui.model.json.JSONModel",
-              "uri":"Invoices.json"
-           }
-        },	
-		  "resources":{
-		  	"css": [ { "uri":"css/style.css"}
-		  	]
-		     },
-		   "routing":{
-		     "config":{
-		        "routerClass":"sap.m.routing.Router",
+	"_version": "1.8.0",
+	"sap.app": {
+		"id": "kiran.Myapp",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationversion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "kiran.Myapp.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30",
+			"libs": {
+				"sap.m": {
+					
+				}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "kiran.Myapp.i18n.i18n"
+				}
+			},
+			"invoice": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "Invoices.json"
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
 				"viewType": "XML",
 				"viewPath": "kiran.Myapp.view",
 				"controlId": "app",
 				"controlAggregation": "pages",
 				"async": true
-		     },
-		    "routes": [
+			},
+			"routes": [
 				{
 					"pattern": "",
 					"name": "overview",
@@ -78,7 +87,6 @@
 					"viewName": "Detail"
 				}
 			}
-			}
-     }
-   
+		}
+	}
 }

@@ -3,6 +3,10 @@
 ], function (Controller) {
    "use strict";
    return Controller.extend("kiran.Myapp.controller.App",{
+	    
+	   onInit: function () {
+			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
+		},
 	   
 		onOpenDialog : function () {
 			this.getOwnerComponent().openHelloDialog();

@@ -28,6 +28,8 @@ sap.ui.define([
 				oDialog = sap.ui.xmlfragment(oView.getId(),"kiran.Myapp.view.HelloDialog", oFragmentcontroller);
 				
 				oView.addDependent(oDialog);
+				// forward compact/cozy style into dialog
+	            jQuery.sap.syncStyleClass(oView.getController().getOwnerComponent().getContentDensityClass(), oView, oDialog);
 			}
 			
 			oDialog.open();
