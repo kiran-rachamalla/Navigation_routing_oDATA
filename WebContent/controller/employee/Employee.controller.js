@@ -1,8 +1,7 @@
 sap.ui.define([
 "kiran/Myapp/controller/BaseController"
-], function(BaseController){
+], function(BaseController, JSONModel){
 "use strict";
-
 return BaseController.extend("kiran.Myapp.controller.employee.Employee",{
 	onInit: function(){
 		let oRouter = this.getRouter();
@@ -26,8 +25,7 @@ return BaseController.extend("kiran.Myapp.controller.employee.Employee",{
     			    	}
     			    	
     			    }
-    	}
-    			);
+    	});
     	
     },
 	_onBindChange:function(oEvent){
