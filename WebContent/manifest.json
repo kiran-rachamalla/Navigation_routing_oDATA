@@ -105,6 +105,22 @@
 					"viewName": "employee.Resume",
 					"viewLevel" : 4,
 					"transition": "slide"
+				},
+				"resumeTabHobbies": {
+					"viewId": "resumeHobbies",
+					"parent": "employeeResume",
+					"viewPath": "kiran.Myapp.view.employee",
+					"viewName": "ResumeHobbies",
+					"controlId": "hobbiesTab",
+					"controlAggregation": "content"
+				},
+				"resumeTabNotes": {
+					"viewId": "resumeNotes",
+					"parent": "employeeResume",
+					"viewPath": "kiran.Myapp.view.employee",
+					"viewName": "ResumeNotes",
+					"controlId": "notesTab",
+					"controlAggregation": "content"
 				}
          }
       },
