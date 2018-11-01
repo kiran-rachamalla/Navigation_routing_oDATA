@@ -1,0 +1,19 @@
+<mvc:View controllerName="kiran.Myapp.controller.employee.overview.EmployeeOverview" 
+	      xmlns="sap.m" 
+	      xmlns:mvc="sap.ui.core.mvc"
+	      xmlns:l="sap.ui.layout">
+
+<Page id="EmployeeOverviewParent" title="{i18n>EmployeeOverview}"
+	  showNavButton="true"
+	  navButtonPress="onNavButtonClk"
+	  class="sapUiResponsiveContentPadding">
+	
+	<content>
+		<!-- inserted by routing -->
+	</content>
+
+
+</Page>
+	  
+
+</mvc:View> 

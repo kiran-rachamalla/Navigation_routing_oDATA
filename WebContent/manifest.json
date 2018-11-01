@@ -69,11 +69,15 @@
 				"pattern": "employees",
 				"name": "employeeList",
 				"target": "employees"
-			}, {
+			},  {
+				"pattern": "employees/overview",
+				"name": "employeeOverview",
+				"target": ["EmployeeOverviewTop","EmployeeOverviewContent"]
+			},{
 				"pattern": "employees/{employeeId}",
 				"name": "employee",
 				"target": "employee"
-			}, {
+			},{
 				"pattern": "employees/{employeeId}/resume:?query:",
 				"name": "employeeResume",
 				"target": "employeeResume"
@@ -94,6 +98,29 @@
 					"viewPath": "kiran.Myapp.view.employee",
 					"viewName": "EmployeeList",
 					"viewLevel" : 2
+				},
+				"EmployeeOverview": {
+					"viewId": "employeeOverview",
+					"viewPath": "kiran.Myapp.view.employee.overview",
+					"viewName": "EmployeeOverview",
+					"viewLevel" : 2
+				},
+				"EmployeeOverviewTop":{
+					"parent":"EmployeeOverview",
+					"viewId": "employeeOverviewTop",
+					"viewPath": "kiran.Myapp.view.employee.overview",
+					"viewName": "EmployeeOverviewTop",
+					"controlId":"EmployeeOverviewParent",
+					"controlAggregation": "content"
+				},
+				"EmployeeOverviewContent":{
+					"parent":"EmployeeOverview",
+				    "viewId": "employeeOverviewContent",
+					"viewPath": "kiran.Myapp.view.employee.overview",
+					"viewName": "EmployeeOverviewContent",					
+					"controlId":"EmployeeOverviewParent",
+					"controlAggregation": "content"
+				    
 				},
 				"employee":{
 				 "viewId": "employee",

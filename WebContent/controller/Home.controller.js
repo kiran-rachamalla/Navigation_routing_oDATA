@@ -9,6 +9,9 @@ sap.ui.define([
 	      },
 	      onEmployeeDisBtn: function(oEvent){
 	    	  this.getRouter().navTo("employeeList");
+	      },
+	      onEmployeeOverviewDisBtn: function(oEvent){
+	    	  this.getRouter().navTo("employeeOverview");
 	      }
    });
 
