@@ -5,7 +5,7 @@
 
 <Page id="EmployeeOverviewParent" title="{i18n>EmployeeOverview}"
 	  showNavButton="true"
-	  navButtonPress="onNavButtonClk"
+	  navButtonPress="onNavBack"
 	  class="sapUiResponsiveContentPadding">
 	
 	<content>
