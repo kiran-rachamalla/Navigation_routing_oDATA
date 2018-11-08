@@ -20,6 +20,7 @@ sap.ui.define([
 			oView = this.getView();
 			oView.bindElement({
 				path : "/Employees(" + oArgs.employeeId + ")",
+				//path : "/Employees/" + oArgs.employeeId,
 				events : {
 					change: this._onBindingChange.bind(this),
 					dataRequested: function (oEvent) {

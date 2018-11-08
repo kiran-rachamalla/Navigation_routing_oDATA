@@ -12,11 +12,11 @@
 		"ach": "CA-UI5-FST",
 		"dataSources": {
 			"employeeRemote": {
-				"uri": "/here/goes/your/serviceUrl/",
+				"uri": "http://CONTOUR.vistex.local:8000/sap/opu/odata/sap/Z10102_EMP_ODATA_SRV/",
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0",
-					"localUri" : "localService/metadata.xml"
+					"localUri" : "http://CONTOUR.vistex.local:8000/sap/opu/odata/sap/Z10102_EMP_ODATA_SRV/metadata.xml"
 				}
 			}
 		}

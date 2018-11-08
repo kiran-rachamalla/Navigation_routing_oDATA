@@ -3,7 +3,9 @@ sap.ui.define([
 	"sap/ui/core/routing/History"
 ], function (Controller, History) {
 	"use strict";
+	let oModel;
 	return Controller.extend("kiran.Myapp.controller.BaseController", {
+		
 		getRouter : function () {
 			return sap.ui.core.UIComponent.getRouterFor(this);
 		},
